@@ -1,0 +1,24 @@
+.footerContainer{
+    width: 100%;
+    background-color: black;
+    color: #fff;
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.info span{
+    width: 10em;
+}
+
+.footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 12vh;
+    color: white;
+    background-color: black;
+}

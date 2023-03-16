@@ -1,11 +1,11 @@
-import styles from '../styles/slider.module.css'
+import styles from '../styles/Slider.module.css'
 import { useState, useEffect } from "react"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface Props {
     content: {
         id: number,
-        src: string
+        src: StaticImageData
     }[]
 }
 

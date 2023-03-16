@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Nav.module.css'
 import logo from '../assets/carpentry-logo.png'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 const navArray = [
     { name: 'Inicio', id: 123, link: '/', isImage: false },
@@ -11,12 +12,16 @@ const navArray = [
     { name: 'Contacto', id: 852, link: '/contacto', isImage: false }
 ]
 
+const showHomeWebLogo = (isString: any) => typeof isString === 'string'
+
 export default function Navbar() {
+
     return (
-        <nav>
+        <nav className={styles.navContainer}>
+            {/* <RxHamburgerMenu /> */}
             <ul className={styles.navbar}>
                 {navArray.map(item => (
-                    <li className={styles.navItem} key={item.id}>
+                    <li className={showHomeWebLogo(item.name) ? styles.navItem : `${styles.logo} ${styles.navItem}`} key={item.id}>
                         <Link href={item.link}>
                             {!item.isImage ? item.name as string : <Image src={item.name} alt='logo' width={150} height={150} />}
                         </Link>

@@ -1,3 +1,8 @@
+.navContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .navbar{
     display: flex;
     justify-content: center;
@@ -10,4 +15,14 @@
 
 .navItem{
     padding: 15px 30px;
+}
+
+@media (width < 750px) {
+    .navbar{
+        display: block;
+        width: fit-content;
+    }
+    .logo{
+        display: none;
+    }
 }

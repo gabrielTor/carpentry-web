@@ -1,4 +1,5 @@
 import styles from '../styles/Footer.module.css'
+import { FaFacebookSquare, FaTwitterSquare, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
     return (
@@ -14,7 +15,7 @@ export default function Footer() {
                 </span>
                 <span>
                     <h4>Redes Sociales</h4>
-                    <p>facebook icono, instagram icono, twitter icono, etc</p>
+                    <p><FaFacebookSquare /> <FaTwitterSquare /> <FaInstagram /></p>
                 </span>
                 <span>
                     <h4>Otra informacion</h4>

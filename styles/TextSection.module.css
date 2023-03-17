@@ -1,0 +1,16 @@
+.container{
+    padding: 5%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.container div{
+    padding: 0 5%;
+    width: 100%;
+    margin: auto;
+}
+
+.container p{
+    word-wrap: break-word;
+}

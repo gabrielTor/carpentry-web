@@ -19,6 +19,19 @@ a {
   min-height: 80vh;
 }
 
+.button{
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 0.6em 1.1em;
+  font-size: medium;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

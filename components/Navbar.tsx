@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from '../styles/Nav.module.css'
 import logo from '../assets/carpentry-logo.png'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { useState } from 'react'
 
 const navArray = [
     { name: 'Inicio', id: 123, link: '/', isImage: false },
@@ -15,10 +16,9 @@ const navArray = [
 const showHomeWebLogo = (isString: any) => typeof isString === 'string'
 
 export default function Navbar() {
-
+    const [active, setActive] = useState<boolean>(false)
     return (
-        <nav className={styles.navContainer}>
-            {/* <RxHamburgerMenu /> */}
+        <nav className={active ? styles.active : styles.navContainer}>
             <ul className={styles.navbar}>
                 {navArray.map(item => (
                     <li className={showHomeWebLogo(item.name) ? styles.navItem : `${styles.logo} ${styles.navItem}`} key={item.id}>
@@ -28,6 +28,9 @@ export default function Navbar() {
                     </li>
                 ))}
             </ul>
+            <button onClick={() => setActive(prev => !prev)}>
+                {active ? 'X' : <RxHamburgerMenu size={25} />}
+            </button>
         </nav>
     )
 }

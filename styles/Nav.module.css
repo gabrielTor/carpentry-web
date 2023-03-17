@@ -3,6 +3,10 @@
     justify-content: space-evenly;
 }
 
+.navContainer button{
+    display: none;
+}
+
 .navbar{
     display: flex;
     justify-content: center;
@@ -17,12 +21,39 @@
     padding: 15px 30px;
 }
 
+.mobileLogo{
+    display: none;
+}
+
 @media (width < 750px) {
+    .navContainer{
+        transform: translateX(-70%);
+        transition: transform 0.4s ease;
+    }
+    .navContainer button ,.active button{
+        background-color: transparent;
+        border: none;
+        display: block;
+        height: fit-content;
+        margin: 5% -10% 5% -20%;
+    }
     .navbar{
         display: block;
         width: fit-content;
     }
+    .active{
+        display: flex;
+        justify-content: space-evenly;
+        transform: translateX(-30%);
+        transition: transform 0.4s ease;
+    }
     .logo{
         display: none;
+    }
+    .mobileLogo{
+        display: inline;
+        position: absolute;
+        right: 5%;
+        top: 3%;
     }
 }

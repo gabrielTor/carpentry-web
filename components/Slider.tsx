@@ -1,46 +1,62 @@
-import styles from '../styles/Slider.module.css'
-import { useState, useEffect } from "react"
-import Image, { StaticImageData } from 'next/image'
+import styles from "../styles/Slider.module.css";
+import { useState, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface Props {
-    content: {
-        id: number,
-        src: StaticImageData
-    }[]
+  content: {
+    id: number;
+    src: StaticImageData;
+  }[];
 }
 
 export default function Slider({ content }: Props) {
+  const [slide, setSlide] = useState<number>(1);
 
-    const [slide, setSlide] = useState<number>(1)
+  const nextBtn = () => {
+    if (slide === content.length) setSlide(1);
+    else setSlide((prev) => prev + 1);
+  };
 
-    const nextBtn = () => {
-        if (slide === content.length) setSlide(1)
-        else setSlide(prev => prev + 1)
-    }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextBtn();
+    }, 5000);
+    return () => clearInterval(interval);
+  });
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            nextBtn()
-        }, 5000);
-        return () => clearInterval(interval)
-    })
+  return (
+      <div className={styles.sliderContainer}>
+        {content.map(({ id, src }) => (
+          <div key={id}>
+            <Image
+              className={
+                id === slide
+                  ? `${styles.display} ${styles.fade}`
+                  : styles.noDisplay
+              }
+              src={src}
+              alt="sliderImages"
+            />
+          </div>
+        ))}
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.sliderContainer}>
-                {content.map(({ id, src }) => (
-                    <div key={id}>
-                        <Image
-                            className={id === slide ? `${styles.display} ${styles.fade}` : styles.noDisplay}
-                            src={src}
-                            alt='sliderImages' />
-                    </div>))}
+        <div className={styles.dotContainer}>
+          {content.map(({ id }) => (
+            <span
+              key={id}
+              onClick={() => setSlide(id)}
+              className={
+                id === slide ? `${styles.dot} ${styles.active}` : styles.dot
+              }
+            ></span>
+          ))}
+        </div>
 
-                <div className={styles.dotContainer}>
-                    {content.map(({ id }) => (
-                        <span key={id} onClick={() => setSlide(id)} className={id === slide ? `${styles.dot} ${styles.active}` : styles.dot}></span>
-                    ))}
-                </div>
-            </div>
-        </div>)
+        <div className={styles.button}>
+        <button>&#10094;</button>
+        <button>&#10095;</button>
+        </div>
+      </div>
+   
+  );
 }

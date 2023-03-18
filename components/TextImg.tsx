@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import img from '../assets/whatwedo.png'
 import styles from '../styles/TextSection.module.css'
+import { useRouter } from 'next/router'
 
 export default function TextImg() {
+    const { push } = useRouter()
+
     return (
         <section className={styles.container}>
             <div>
@@ -21,7 +24,7 @@ export default function TextImg() {
                     <li>HANDCRAFTED FURNITURE</li>
                     <li>CUSTOM SOLID SURFACING MANUFACTURING</li>
                 </ul>
-                <button className='button'>Servicios</button>
+                <button className='button' onClick={() => push('/empresa')}>Servicios</button>
             </div>
         </section>
     )

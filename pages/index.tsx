@@ -14,6 +14,7 @@ import Image from 'next/image'
 import TextImg from '../components/TextImg'
 import ImageList from '../components/ImageList'
 import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router'
 
 const sliderArray = [img1, img2, img3, img4]
 const sliderContent = sliderArray.map((a, i) => ({ id: ++i, src: a }))
@@ -24,6 +25,8 @@ const categoryImg = [
 ]
 
 const Home: NextPage = () => {
+  const { push } = useRouter()
+
   return (
     <>
       <Slider content={sliderContent} />
@@ -35,7 +38,7 @@ const Home: NextPage = () => {
       <div className={styles.service}>
         <hr />
         <span>
-          <button className='button'>Ver Galeria</button>
+          <button className='button' onClick={() => push('galeria')}>Ver Galeria</button>
         </span>
         <hr />
       </div>

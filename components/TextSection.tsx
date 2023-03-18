@@ -1,6 +1,9 @@
 import styles from '../styles/TextSection.module.css'
+import { useRouter } from 'next/router'
 
 export default function TextSection() {
+    const { push } = useRouter()
+
     return (
         <section className={styles.container}>
             <div>
@@ -19,7 +22,7 @@ export default function TextSection() {
                 <p>261-557-8851</p>
                 <h4>DIRECCION</h4>
                 <address>Peru 1264, Las Heras, Mendoza, CP5539</address>
-                <button className='button'>Contactar</button>
+                <button className='button' onClick={() => push('/contacto')}>Contactar</button>
             </div>
         </section>
     )

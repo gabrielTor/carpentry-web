@@ -24,12 +24,18 @@ a {
   border: 1px solid black;
   padding: 0.6em 1.1em;
   font-size: medium;
+  margin: 1.1rem auto;
+  /* border-radius: 3px; */
 }
 
 .button:hover{
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+.full-screen{
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {

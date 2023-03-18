@@ -18,7 +18,7 @@ export default function TextSection() {
                 <h4>WHATSAPP</h4>
                 <p>261-557-8851</p>
                 <h4>DIRECCION</h4>
-                <p>Peru 1264, Las Heras, Mendoza, CP5539</p>
+                <address>Peru 1264, Las Heras, Mendoza, CP5539</address>
                 <button className='button'>Contactar</button>
             </div>
         </section>

@@ -1,13 +1,14 @@
 import styles from '../styles/Footer.module.css'
 import { FaFacebookSquare, FaTwitterSquare, FaInstagram } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <div className={styles.footerContainer}>
+        <footer className={styles.footerContainer}>
             <div className={styles.info}>
                 <span>
                     <h4>Ubicacion</h4>
-                    <p>Perú 1264, M5539 Las Heras, Mendoza</p>
+                    <address>Perú 1264, M5539 Las Heras, Mendoza</address>
                 </span>
                 <span>
                     <h4>Horarios</h4>
@@ -18,13 +19,16 @@ export default function Footer() {
                     <p><FaFacebookSquare /> <FaTwitterSquare /> <FaInstagram /></p>
                 </span>
                 <span>
-                    <h4>Otra informacion</h4>
-                    <p>algo....</p>
+                    <h4>Informacion extra</h4>
+                    <p>Pagina desarrollada y mantenida por <br />
+                        <Link href='https://gabrieltor.github.io/portfolio' target='_blank' className={styles.link}>
+                            Dario Gabriel
+                        </Link></p>
                 </span>
             </div>
             <div className={styles.footer}>
                 <h4>© Carpinteria Torres 2023. ALL RIGHTS RESERVED.</h4>
             </div>
-        </div>
+        </footer>
     )
 }

@@ -22,3 +22,11 @@
     color: white;
     background-color: black;
 }
+
+.link{
+    color: bisque;
+}
+
+.link:hover{
+    color: saddlebrown;
+}

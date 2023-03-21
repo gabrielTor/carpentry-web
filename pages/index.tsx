@@ -30,11 +30,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Slider content={sliderContent} />
-      <TextSection />
+       <TextSection />
       <Image alt='muebles' src={img5} className='full-screen' />
       <TextImg />
-      <Image alt='muebles' src={img6} className='full-screen' />
-      <ImageList images={categoryImg} />
+  <Image alt='muebles' src={img6} className='full-screen' />
+      <ImageList images={categoryImg} /> 
       <div className={styles.service}>
         <hr />
         <span>

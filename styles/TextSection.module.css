@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Open+Sans:wght@300;400&family=Poppins:wght@200&family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Roboto:wght@100;300&display=swap');
 .container{
     padding: 5%;
     display: flex;
-    flex-grow: 1;
+   flex-direction: column;
     justify-content: space-between;
+}
+.container div h1 {
+    font-family: 'Raleway', sans-serif;
+
+}
+.container div h3{
+    font-family: 'Raleway', sans-serif;
+
+}
+.container div h4 {
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .container div{
@@ -12,5 +25,8 @@
 }
 
 .container p{
-    word-wrap: break-word;
+    font-weight: 300;
+
+    font-family: 'Lato', sans-serif;
+
 }

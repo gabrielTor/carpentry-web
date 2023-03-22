@@ -15,6 +15,7 @@
 
 .formContainer label{
     display: inline;
+    text-transform:capitalize;
 }
 
 .formContainer p{

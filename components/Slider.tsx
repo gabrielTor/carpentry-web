@@ -26,7 +26,7 @@ export default function Slider({ content }: Props) {
       nextBtn();
     }, 5000);
     return () => clearInterval(interval);
-  });
+  }, [slide]);
 
   return (
     <div className={styles.sliderContainer}>
@@ -40,6 +40,7 @@ export default function Slider({ content }: Props) {
             }
             src={src}
             alt="sliderImages"
+            priority={true}
           />
         </div>
       ))}
@@ -61,6 +62,5 @@ export default function Slider({ content }: Props) {
         <button onClick={nextBtn}>&#10095;</button>
       </div>
     </div>
-
-  );
+  )
 }

@@ -20,9 +20,9 @@ export default function Footer() {
                 </span>
                 <span>
                     <h4>Informacion extra</h4>
-                    <p>Pagina desarrollada y mantenida por <br />
+                    <p>Pagina desarrollada y mantenida por {' '}
                         <Link href='https://gabrieltor.github.io/portfolio' target='_blank' className={styles.link}>
-                            Dario Gabriel
+                            DGT
                         </Link></p>
                 </span>
             </div>

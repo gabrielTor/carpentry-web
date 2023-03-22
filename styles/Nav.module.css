@@ -19,6 +19,7 @@
 
 .navItem{
     padding: 15px 30px;
+
 }
 
 .mobileLogo{
@@ -44,8 +45,17 @@
     .active{
         display: flex;
         justify-content: space-evenly;
-        transform: translateX(-30%);
+        transform: translateX(-0%);
         transition: transform 0.4s ease;
+        background-color: rgb(252, 251, 251);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+
+    }
+    .active li{
+        margin: auto;
     }
     .logo{
         display: none;

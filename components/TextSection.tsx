@@ -21,7 +21,7 @@ export default function TextSection() {
                 <h4>WHATSAPP</h4>
                 <p>261-557-8851</p>
                 <h4>DIRECCION</h4>
-                <address>Peru 1264, Las Heras, Mendoza, CP5539</address>
+                <p>Peru 1264, Las Heras, Mendoza, CP5539</p>
                 <button className='button' onClick={() => push('/contacto')}>Contactar</button>
             </div>
         </section>

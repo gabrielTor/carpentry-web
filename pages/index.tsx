@@ -31,9 +31,13 @@ const Home: NextPage = () => {
     <>
       <Slider content={sliderContent} />
        <TextSection />
-      <Image alt='muebles' src={img5} className='full-screen' />
+       <div className={styles.images}>
+       <Image alt='muebles' src={img5} />
+      </div>
       <TextImg />
-  <Image alt='muebles' src={img6} className='full-screen' />
+      <div className={styles.images}>
+       <Image alt='muebles' src={img6} />
+      </div>
       <ImageList images={categoryImg} /> 
       <div className={styles.service}>
         <hr />

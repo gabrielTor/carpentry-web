@@ -1,0 +1,9 @@
+.container{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container img{
+    margin: 2px;
+}

@@ -18,7 +18,9 @@ export default function Footer() {
                     <h4>Redes Sociales</h4>
                     <p>
                         <Link href='https://www.facebook.com/profile.php?id=100070237831654' target='_blank'><FaFacebookSquare /></Link>
+                        &nbsp;
                         <FaTwitterSquare />
+                        &nbsp;
                         <FaInstagram />
                     </p>
                 </span>

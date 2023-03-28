@@ -4,37 +4,43 @@
     display: flex;
     justify-content: space-between;
 }
-.container img{
+.reverse{
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.container img, .reverse img{
     width: 100%;
     height: auto;
 }
-.container div h1 {
+.container div h1, .reverse div h1 {
     font-family: 'Raleway', sans-serif;
 
 }
-.container div h3{
+.container div h3, .reverse div h3{
     font-family: 'Raleway', sans-serif;
 
 }
-.container div h4 {
+.container div h4, .reverse div h4 {
     font-family: 'Raleway', sans-serif;
 
 }
 
-.container div{
+.container div, .reverse div{
     padding: 0 5%;
     width: 100%;
     margin: auto;
 }
 
-.container p{
+.container p, .reverse p{
     font-weight: 300;
 
     font-family: 'Lato', sans-serif;
 
 }
 @media (width<750px) {
-    .container{
+    .container, .reverse{
         padding: 5%;
         display: flex;
        flex-direction: column;

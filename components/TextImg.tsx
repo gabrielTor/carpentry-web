@@ -1,30 +1,37 @@
-import Image from 'next/image'
-import img from '../assets/whatwedo.png'
+import Image, { StaticImageData } from 'next/image'
 import styles from '../styles/TextSection.module.css'
 import { useRouter } from 'next/router'
 
-export default function TextImg() {
+interface Props {
+    header: string
+    info: string
+    image: StaticImageData
+    style: string
+    button?: { name: string, route: string }
+    list?: string[]
+}
+
+export default function TextImg({ header, info, image, style, button, list }: Props) {
     const { push } = useRouter()
 
     return (
-        <section className={styles.container}>
+        <section className={styles[style]}>
             <div>
-                <Image alt='what we do' src={img} />
+                <Image alt={header} src={image} />
             </div>
             <div>
-                <h1>LO QUE HACEMOS</h1>
-                <p>
-                    We provide our clients with years of experience of work with hardwoods, traditional plywood and the most exotic wood veneers which set the standard for a superior craftsmanship and an exceptional finish. Our finishing team is capable of matching any existing finish or creates the desirable client’s expectation.
-                </p>
+                <h1>{header}</h1>
+                <p>{info}</p>
                 <ul>
-                    <li>LUXURY RESIDENCES</li>
-                    <li>CONDOMINIUM LOBBY</li>
-                    <li>RESTAURANT</li>
-                    <li>COMMERCIAL</li>
-                    <li>HANDCRAFTED FURNITURE</li>
-                    <li>CUSTOM SOLID SURFACING MANUFACTURING</li>
+                    {list?.map(item => (
+                        <li key={item}>{item}</li>
+                    ))}
                 </ul>
-                <button className='button' onClick={() => push('/empresa')}>Servicios</button>
+                {button &&
+                    <button className='button' onClick={() => push(button.route)}>
+                        {button.name}
+                    </button>
+                }
             </div>
         </section>
     )

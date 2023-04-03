@@ -1,6 +1,8 @@
 .navContainer{
     display: flex;
     justify-content: space-evenly;
+    background-color: transparent;
+    
 }
 
 .navContainer button{
@@ -30,17 +32,37 @@
     .navContainer{
         transform: translateX(-70%);
         transition: transform 0.4s ease;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 100vh;
+        margin-bottom: -470px;
     }
-    .navContainer button ,.active button{
+    .navContainer li{
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+   .navContainer button {
+        background-color: transparent;
+        border: none;
+        display: block;
+        height: fit-content;
+        margin: 5% 0% 5% -20%;
+        font-size: large;
+    }
+    .active button{
         background-color: transparent;
         border: none;
         display: block;
         height: fit-content;
         margin: 5% -10% 5% -20%;
+        font-size: large;
     }
     .navbar{
         display: block;
         width: fit-content;
+        margin: auto 10%;
     }
     .active{
         display: flex;
@@ -48,22 +70,32 @@
         transform: translateX(-0%);
         transition: transform 0.4s ease;
         background-color: rgb(252, 251, 251);
-        width: 100vw;
+        width:100vw;
         height: 100vh;
         position: fixed;
         z-index: 999;
+       
 
     }
-    .active li{
-        margin: auto;
+    .active img{
+        padding: 100px;
     }
+    .active li{
+        font-size: 28px;
+        text-transform: uppercase;
+        margin: 1px;
+        text-align: center;
+    }
+ 
     .logo{
         display: none;
+
     }
     .mobileLogo{
         display: inline;
         position: absolute;
         right: 5%;
         top: 3%;
+        
     }
 }

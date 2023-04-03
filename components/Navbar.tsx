@@ -22,7 +22,7 @@ export default function Navbar() {
             <ul className={styles.navbar}>
                 {navArray.map(item => (
                     <li className={showHomeWebLogo(item.name) ? styles.navItem : `${styles.logo} ${styles.navItem}`} key={item.id}>
-                        <Link href={item.link}>
+                        <Link onClick={() => setActive(prev => !prev)} href={item.link}>
                             {!item.isImage ? item.name as string : <Image src={item.name} alt='logo' width={150} height={150} priority />}
                         </Link>
                     </li>

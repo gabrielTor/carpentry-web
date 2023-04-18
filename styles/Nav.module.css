@@ -1,8 +1,7 @@
 .navContainer{
     display: flex;
     justify-content: space-evenly;
-    background-color: transparent;
-    
+    background-color: transparent; 
 }
 
 .navContainer button{
@@ -74,8 +73,6 @@
         height: 100vh;
         position: fixed;
         z-index: 999;
-       
-
     }
     .active img{
         padding: 100px;
@@ -89,13 +86,11 @@
  
     .logo{
         display: none;
-
     }
     .mobileLogo{
         display: inline;
         position: absolute;
         right: 5%;
         top: 3%;
-        
     }
 }

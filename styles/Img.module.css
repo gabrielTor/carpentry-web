@@ -5,9 +5,8 @@
     text-align: center;
 }
 .container img {
- 
-    width: 90%;
-    height: auto;
+    width: 21em;
+    height: 21em;
 }
 .container h2{
     font-family: 'Raleway', sans-serif;

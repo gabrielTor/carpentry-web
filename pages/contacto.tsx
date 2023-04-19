@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Form from "../components/Form";
+import Form from "../components/common/Form";
 import styles from '../styles/Contact.module.css'
 import { contact } from "../services/sendContactForm";
 import Map from "../components/Map";

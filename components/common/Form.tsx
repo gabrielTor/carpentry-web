@@ -1,5 +1,5 @@
-import useForm from '../hooks/useForm'
-import styles from '../styles/Contact.module.css'
+import useForm from '../../hooks/useForm'
+import styles from '../../styles/Contact.module.css'
 import { useRef } from 'react'
 
 interface Props {

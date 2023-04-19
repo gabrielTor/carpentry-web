@@ -8,14 +8,8 @@ export default function TextSection() {
         <section className={styles.container}>
             <div>
                 <h1>Carpinteria Torres</h1>
-                <h3>Carpinteria Personalizada y a medida.</h3>
-                <p>Is a family owned and operated custom-woodwork corporation located in Miami,
-                    Florida. For many generations superior craftsmanship has been a tradition in the
-                    Martinez Family, our family. Today, Roberto & Robeisy Martinez <em>(3rd and 4th
-                        Generations carpenters)</em> proudly offers some of the finest handcrafted
-                    woodwork. For several years Robert Carpentry has provided its services to a
-                    wide variety of Luxury Residences, Hotels & Condominium, Restaurants, Stores
-                    and many more customers throughout South Florida and the Caribbean.</p>
+                <h3>Carpinteria a medida.</h3>
+                <p>Si tienes muy poco espacio en tu hogar y necesitas muebles que aprovechen cada centímetro a la vez que desarrollan un labor funcional y decorativo, somos tu mejor opción. Nuestro servicio de carpintería a medida es capaz de adecuar tus muebles a cualquier espacio. Imagínate poder tener una estantería que ocupe toda la pared y llegue hasta el techo, cuantos habitáculos para guardar tus libros o poner tus marcos de fotos ganarías. Además de la elegancia que le daría esa madera a tu salón. Cualquiera que sea tu necesidad, nuestra carpintería a medida es tu mejor solución.</p>
             </div>
             <div>
                 <h4>WHATSAPP</h4>

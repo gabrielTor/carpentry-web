@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import TextImg from "../components/TextImg"
+import TextImg from "../components/common/TextImg"
 import img from '../assets/whatwedo.png'
 
 const data = [

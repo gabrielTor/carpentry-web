@@ -1,4 +1,4 @@
-import styles from "../styles/Slider.module.css";
+import styles from "../../styles/Slider.module.css";
 import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 

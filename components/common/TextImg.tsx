@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
-import styles from '../styles/TextSection.module.css'
+import styles from '../../styles/TextSection.module.css'
 import { useRouter } from 'next/router'
 
 interface Props {

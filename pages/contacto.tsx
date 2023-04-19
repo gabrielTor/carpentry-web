@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Form from "../components/Form";
 import styles from '../styles/Contact.module.css'
 import { contact } from "../services/sendContactForm";
+import Map from "../components/Map";
 
 const fieldsets = [
     { name: 'nombre', required: true },
@@ -14,7 +15,11 @@ const Contacto: NextPage = () => {
     return (
         <section className={styles.container}>
             <header>Diganos en que lo podriamos asistir</header>
-            <Form fieldsets={fieldsets} btnTitle='Enviar' fn={contact} />
+            <section className={styles["form-map-container"]}>
+                <Form fieldsets={fieldsets} btnTitle='Enviar' fn={contact} />
+                <Map marker={[-32.853158138192946, -68.84661782109399]}
+                    popupText='Peru 1264, Las Heras, Mendoza' />
+            </section>
         </section>
     )
 }

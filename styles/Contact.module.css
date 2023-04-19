@@ -7,6 +7,10 @@
     font-size: larger;
 }
 
+.formContainer{
+    width: 100%;
+}
+
 .formContainer fieldset{
     border: none;
     padding: 0;
@@ -42,4 +46,24 @@
     border: 1px solid #ccc;
     padding: 1%;
     margin-top: 0.8%;
+}
+
+.map{
+    width: 85%;
+    height: 35em;
+}
+
+.form-map-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+@media (width < 750px) {
+    .form-map-container{
+        flex-direction: column;
+    }
+    .map{
+        width: 100%;
+    }
 }

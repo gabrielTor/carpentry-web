@@ -5,7 +5,7 @@ import img2 from '../assets/HomeSlider_Web_2.jpg'
 import img3 from '../assets/HomeSlider_Web_3.jpg'
 import img4 from '../assets/HomeSlider_Web_4.jpg'
 import img5 from '../assets/mesa.jpg'
-import img6 from '../assets/logo-with-bg.jpg'
+import img6 from '../assets/carpentry.jpg'
 import img from '../assets/whatwedo.png'
 import ex1 from '../assets/repare.webp'
 import ex2 from '../assets/madera-maciza.jpeg'
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       <Slider content={sliderContent} />
       <TextSection />
       <div className={styles.images}>
-        <Image alt='muebles' src={img5} />
+        <Image alt='mesa' src={img5} />
       </div>
       <TextImg header='LO QUE HACEMOS'
         image={img}
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
         style='container'
         list={list} />
       <div className={styles.images}>
-        <Image alt='muebles' src={img6} />
+        <Image alt='carpinteria' src={img6} />
       </div>
       <ImageList images={categoryImg} />
       <div className={styles.service}>

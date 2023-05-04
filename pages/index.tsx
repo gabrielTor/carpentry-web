@@ -25,12 +25,9 @@ const categoryImg = [
   { src: ex3, title: 'Muebles de Melamina' }
 ]
 const list = [
-  'LUXURY RESIDENCES',
-  'CONDOMINIUM LOBBY',
-  'RESTAURANT',
-  'COMMERCIAL',
-  'HANDCRAFTED FURNITURE',
-  'CUSTOM SOLID SURFACING MANUFACTURING'
+  'Reparaciones',
+  'Muebles de madera maciza',
+  'Muebles de Melamina',
 ]
 const info = 'En nuestro taller de carpintería de madera ofrecemos todos los servicios posibles referentes a este material. Cualquiera que sea tu necesidad, si se puede solventar con madera, somos expertos. Todos nuestros años de experiencia han sido acompañados de continua formación de nuestros profesionales. Las técnicas más antiguas y las más novedosas tienen cabida por igual en nuestras instalaciones. Ponte en contacto con nosotros para saber nuestro método de trabajo y tener la seguridad de estar tratando con las personas adecuadas. Todos nosotros tenemos gran pasión por nuestro trabajo, lo que tiene como consecuencia la elaboración de piezas de madera creadas de manera meticulosa, para acercarse a la perfección, y con mucho amor.'
 

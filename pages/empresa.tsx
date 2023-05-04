@@ -12,7 +12,7 @@ const data = [
 const Empresa: NextPage = () => {
     return (
         <>
-            {
+            {true ? null :
                 data.map(({ header, image, style, info }) => (
                     <TextImg key={header}
                         header={header}

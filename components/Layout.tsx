@@ -35,6 +35,7 @@ export default function Layout({ children }: Props) {
             <meta name="description" content={pathnameMetaDescriptions(pathname)} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="robots" content="index, follow"/>
+            <meta name="google-site-verification" content="1krYlTYUrfAS01AbdTXIBRFIONugLjzxvr1Ha9UXUjg" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <>

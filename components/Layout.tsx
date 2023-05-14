@@ -34,6 +34,7 @@ export default function Layout({ children }: Props) {
             <title>{pathname === '/' ? 'Carpinteria Torres' : pathname.slice(1)}</title>
             <meta name="description" content={pathnameMetaDescriptions(pathname)} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="robots" content="index, follow"/>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <>

@@ -2,6 +2,7 @@ import { useState, ChangeEvent, FormEvent, useCallback, RefObject } from "react"
 
 const useForm = <T,>(onSubmit: (values?: T) => Promise<void>, formRef?: RefObject<HTMLFormElement>, initialValue?: T) => {
     const [values, setValues] = useState<T>(initialValue || {} as T)
+    const [toastMessage, setToastMessage] = useState<string | null>(null)
 
     const handleChange = useCallback((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target
@@ -15,15 +16,17 @@ const useForm = <T,>(onSubmit: (values?: T) => Promise<void>, formRef?: RefObjec
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+        setToastMessage('Hemos recibido su correo. Le responderemos tan pronto como sea posible. Gracias por ponerse en contacto con nosotros')
         onSubmit(values)
             .catch(err => console.error(err))
             .finally(() => {
                 setValues({} as T)
                 formRef?.current?.reset()
+                setTimeout(()=>setToastMessage(null), 10000)
             })
     }
 
-    return { values, validateValues, handleChange, handleSubmit }
+    return { values, validateValues, handleChange, handleSubmit, toastMessage }
 }
 
 export default useForm;

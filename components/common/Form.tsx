@@ -1,6 +1,7 @@
 import useForm from '../../hooks/useForm'
 import styles from '../../styles/Contact.module.css'
 import { useRef } from 'react'
+import Toast from './Toast'
 
 interface Props {
     fieldsets: {
@@ -13,7 +14,7 @@ interface Props {
 
 export default function Form({ fieldsets, btnTitle, fn }: Props) {
     const form = useRef<HTMLFormElement>(null)
-    const { handleChange, handleSubmit } = useForm(fn, form)
+    const { handleChange, handleSubmit, toastMessage } = useForm(fn, form)
 
     return (
         <form ref={form} className={styles.formContainer} onSubmit={handleSubmit}>
@@ -35,6 +36,7 @@ export default function Form({ fieldsets, btnTitle, fn }: Props) {
                 ))
             }
             <button type="submit" className="button">{btnTitle}</button>
+            {toastMessage && <Toast duration={5000} message={toastMessage} onClose={()=>{}} />}
         </form>
     )
 }

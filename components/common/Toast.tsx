@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import styles from '../../styles/Toast.module.css'
 
 interface ToastProps {
     message: string;
@@ -22,20 +23,9 @@ export default function Toast({ message, duration, onClose }: ToastProps) {
         setVisible(false);
         onClose();
     };
-
+    
     return (
-        <div style={{
-            position: 'fixed',
-            bottom: '1rem',
-            right: '1rem',
-            backgroundColor: '#333',
-            color: '#fff',
-            padding: '1rem',
-            borderRadius: '0.25rem',
-            boxShadow: '0 0.25rem 0.5rem rgba(0, 0, 0, 0.5)',
-            opacity: visible ? 1 : 0,
-            transition: 'opacity 0.3s ease-in-out',
-        }}>
+        <div className={styles.toast} style={{ opacity: visible ? 1 : 0 }}>
             {message}
             <button style={{
                 marginLeft: '1rem',
@@ -45,6 +35,7 @@ export default function Toast({ message, duration, onClose }: ToastProps) {
                 outline: 'none',
                 cursor: 'pointer',
             }}
+                type='button'
                 onClick={handleClose}>
                 X
             </button>

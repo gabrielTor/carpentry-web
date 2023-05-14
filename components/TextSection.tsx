@@ -13,7 +13,7 @@ export default function TextSection() {
             </div>
             <div>
                 <h4>WHATSAPP</h4>
-                <p>261-557-8851</p>
+                <a href='https://wa.me/+542615578851' target='_blank'>261-557-8851</a>
                 <h4>DIRECCION</h4>
                 <p>Peru 1264, Las Heras, Mendoza, CP5539</p>
                 <button className='button' onClick={() => push('/contacto')}>Contactar</button>

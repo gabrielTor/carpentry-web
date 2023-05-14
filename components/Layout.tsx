@@ -12,12 +12,29 @@ interface Props {
     children: ReactNode
 }
 
+const home = 'Descubre cómo nuestros servicios de carpintería pueden transformar tu hogar. Contáctanos para una cotización gratis.'
+const company = 'Somos una empresa de carpintería con años de experiencia en el sector. Ofrecemos servicios personalizados para satisfacer las necesidades de cada cliente.'
+const galery = ' Explora nuestra galería de proyectos de carpintería y descubre lo que podemos hacer por ti. Desde muebles a medida hasta instalaciones comerciales, estamos aquí para ayudarte a hacer realidad tus ideas.'
+const contacto = '¿Tienes alguna pregunta o estás interesado en nuestros servicios de carpintería? Ponte en contacto con nosotros y estaremos encantados de ayudarte.'
+
+const pathnameMetaDescriptions = (path: string) :string => {
+    switch (path) {
+        case '/empresa': return company             
+        case '/galeria': return galery             
+        case '/contacto': return contacto             
+        default: return home
+    }
+}
+
 export default function Layout({ children }: Props) {
     const { pathname } = useRouter()
 
     return <>
         <Head>
             <title>{pathname === '/' ? 'Carpinteria Torres' : pathname.slice(1)}</title>
+            <meta name="description" content={pathnameMetaDescriptions(pathname)} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
         </Head>
         <>
             <Link href='/' className={styles.mobileLogo}>

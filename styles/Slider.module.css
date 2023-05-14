@@ -52,14 +52,20 @@
     top:-57%;
 }
 .button button {
+    padding: 7px 0.8em;
     background-color: transparent;
     border:0;
     color:#fff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
     font-size: 30px;
-    margin: 0 7px;
 }
+
+.button button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.338);
+}
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}

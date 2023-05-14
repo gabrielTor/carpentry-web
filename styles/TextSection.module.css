@@ -35,10 +35,19 @@
 
 .container p, .reverse p{
     font-weight: 300;
-
     font-family: 'Lato', sans-serif;
 
 }
+
+.container a {
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+.container a:hover{
+    cursor: pointer;
+}
+
 @media (width<750px) {
     .container, .reverse{
         padding: 5%;

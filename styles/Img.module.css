@@ -5,12 +5,11 @@
     text-align: center;
 }
 .container img {
-    width: 20em;
-    height: 20em;
+    width: 16em;
+    height: 16em;
 }
 .container h2{
     font-family: 'Raleway', sans-serif;
-
 }
 @media (width<750px) {
     .container{
@@ -21,7 +20,6 @@
         text-align: center;
     }
     .container img {
- 
         width: 80%;
         height: auto;
     }

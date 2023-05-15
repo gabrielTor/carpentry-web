@@ -12,7 +12,12 @@ const data = [
 const Empresa: NextPage = () => {
     return (
         <>
-            {true ? null :
+            {true ? 
+                <div className='underContruction'>
+                    <h1>Pagina esta en desarrollo</h1>
+                    <p>Esta pagina está actualmente en construcción. Por favor, vuelva más tarde para las actualizaciones.</p>
+                </div>
+            :
                 data.map(({ header, image, style, info }) => (
                     <TextImg key={header}
                         header={header}

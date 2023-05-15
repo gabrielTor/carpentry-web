@@ -14,7 +14,7 @@ interface Props {
 
 const home = 'Descubre cómo nuestros servicios de carpintería pueden transformar tu hogar. Contáctanos para una cotización gratis.'
 const company = 'Somos una empresa de carpintería con años de experiencia en el sector. Ofrecemos servicios personalizados para satisfacer las necesidades de cada cliente.'
-const galery = ' Explora nuestra galería de proyectos de carpintería y descubre lo que podemos hacer por ti. Desde muebles a medida hasta instalaciones comerciales, estamos aquí para ayudarte a hacer realidad tus ideas.'
+const galery = 'Explora nuestra galería de proyectos de carpintería y descubre lo que podemos hacer por ti. Desde muebles a medida hasta instalaciones comerciales, estamos aquí para ayudarte a hacer realidad tus ideas.'
 const contacto = '¿Tienes alguna pregunta o estás interesado en nuestros servicios de carpintería? Ponte en contacto con nosotros y estaremos encantados de ayudarte.'
 
 const pathnameMetaDescriptions = (path: string) :string => {
@@ -36,6 +36,10 @@ export default function Layout({ children }: Props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="robots" content="index, follow"/>
             <meta name="google-site-verification" content="1krYlTYUrfAS01AbdTXIBRFIONugLjzxvr1Ha9UXUjg" />
+            <meta property="og:title" content="Carpinteria Torres" />
+            <meta property="og:type" content="image" />
+            <meta property="og:image" content='https://firebasestorage.googleapis.com/v0/b/carpentry-web-app.appspot.com/o/carpentry-logo.png?alt=media&token=67d3449e-6937-4c4f-b925-4e2a51f3b7ac' />
+            <meta property="og:url" content="https://carpinteriatorres.com.ar" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <>
